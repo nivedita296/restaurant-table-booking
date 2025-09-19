@@ -1,38 +1,122 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(135deg, #ffefd5 0%, #fff8dc 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Common Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Common Link Styles */
+.back-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #d2691e;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(210, 105, 30, 0.1);
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.back-link:hover {
+  background: rgba(210, 105, 30, 0.2);
+  transform: translateX(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Star Rating Styles */
+.stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 16px;
+}
+
+.star.full {
+  color: #ffd700;
+}
+
+.star.half {
+  background: linear-gradient(90deg, #ffd700 50%, #ddd 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+/* Error and Loading States */
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+
+.error-message h2 {
+  color: #d32f2f;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
   }
+  
+  .back-link {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* Indian Theme Colors */
+:root {
+  --primary-orange: #ff6b35;
+  --primary-red: #dc2626;
+  --accent-gold: #fbbf24;
+  --warm-yellow: #fef3c7;
+  --deep-orange: #d2691e;
+  --soft-cream: #fefce8;
+  --warm-white: #fffbeb;
 }
